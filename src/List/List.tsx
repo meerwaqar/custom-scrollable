@@ -83,7 +83,7 @@ const List = (props: ListProps<any>) => {
     <div className="list" style={{ width, height }}>
       {showButtons && (
         <div className="actions">
-          <button onClick={()=>scroll(false)}>
+          <button onClick={()=>scroll(true)}>
             {orientation === "vertical" ? "Scroll Up" : "Scroll Left"}
           </button>
         </div>
