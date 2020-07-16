@@ -13,14 +13,16 @@ function App() {
     return <div className="custom-list-item">Item Number {val}</div>;
   };
   return (
-    <div className="main">
-      <List
-        data={getData(100)}
-        orientation="horizontal"
-        isDragable
-        component={customComponent}
-      />
-    </div>
+    <>
+      <div className="main">
+        <List
+          data={getData(100)}
+          orientation="vertical"
+          isDragable
+          component={customComponent}
+        />
+      </div>
+    </>
   );
 }
 

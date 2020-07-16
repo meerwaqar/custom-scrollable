@@ -80,17 +80,20 @@ const List = (props: ListProps<any>) => {
   };
 
   return (
-    <div className="list" style={{ width, height }}>
+    <div className="list" style={{ width, height}}>
       {showButtons && (
         <div className="actions">
-          <button onClick={()=>scroll(true)}>
+          <button onClick={() => scroll(true)}>
             {orientation === "vertical" ? "Scroll Up" : "Scroll Left"}
           </button>
         </div>
       )}
 
       <div className="list-main">
-        <ul className={`container ${orientation}`} style={{ width, height }}>
+        <ul
+          className={`container ${orientation}`}
+          style={{ width, height: isVertical ? height : "auto" }}
+        >
           {data.map((value, index) => (
             <li
               draggable={isDragable}
@@ -104,7 +107,7 @@ const List = (props: ListProps<any>) => {
       </div>
       {showButtons && (
         <div className="actions">
-          <button onClick={()=>scroll(false)}>
+          <button onClick={() => scroll(false)}>
             {orientation === "vertical" ? "Scroll Down" : "Scroll Right"}
           </button>
         </div>
