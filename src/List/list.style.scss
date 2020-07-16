@@ -1,0 +1,48 @@
+.list-main ul {
+  border: solid 1px red;
+  list-style-type: none;
+  overflow: hidden;
+  padding: 5px;
+  margin: 0;
+}
+.list-main li {
+  cursor: move;
+}
+.list-main ul.vertical {
+  overflow-y: scroll;
+}
+
+.list-main li.vertical {
+  margin-bottom: 5px;
+}
+
+.list-main ul.horizontal {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.list-main li.horizontal {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 5px;
+}
+
+.list {
+}
+
+.actions {
+  text-align: center;
+
+  button {
+    background: transparent;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  input {
+    background: transparent;
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+
+}
