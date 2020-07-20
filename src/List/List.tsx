@@ -99,6 +99,7 @@ const List = (props: ListProps<any>) => {
               draggable={isDragable}
               className={`list-item ${orientation}`}
               id={`list-item-${index}`}
+              key={`list-item-${index}`}
             >
               {component ? component(value, index) : value}
             </li>

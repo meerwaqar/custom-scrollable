@@ -18,6 +18,7 @@ function App() {
         <List
           data={getData(100)}
           orientation="vertical"
+          // orientation="horizontal"
           isDragable
           component={customComponent}
         />
