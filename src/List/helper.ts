@@ -1,5 +1,5 @@
 export function getDragAfterElement(
-    container: Element,
+    container: HTMLUListElement,
     position: number,
     isVertical: boolean
   ) {
