@@ -75,7 +75,7 @@ const List = (props: ListProps<any>) => {
       const options = isVertical
         ? { top: toScroll + 5 }
         : { left: toScroll + 5 };
-      list?.current?.scrollBy(options); // 5px Margin
+      list?.current?.scrollBy({...options, behavior:"smooth"}); // 5px Margin
     }
   };
 

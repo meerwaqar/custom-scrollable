@@ -1,50 +1,49 @@
-.list-main ul {
-  border: solid 1px black;
-  list-style-type: none;
-  overflow: hidden;
-  padding: 5px;
-  margin: 0;
-}
-.list-main li {
-  cursor: move;
-}
-.list-main ul.vertical {
-  overflow-y: scroll;
-}
-
-.list-main li.vertical {
-  margin-bottom: 5px;
-}
-
-.list-main ul.horizontal {
-  overflow-x: scroll;
-  white-space: nowrap;
-}
-
-.list-main li.horizontal {
-  display: inline-block;
-  list-style-type: none;
-  margin-left: 5px;
-}
+$defaultPadding: 5px;
+$defaultMargin: 5px;
+$borderColor: black;
 
 .list-main {
-    margin: 10px 0;
+  margin: 10px 0;
+
+  ul {
+    border: solid 1px $borderColor;
+    list-style-type: none;
+    overflow: hidden;
+    padding: $defaultPadding;
+    margin: 0;
+  }
+  ul.vertical {
+    overflow-y: scroll;
+  }
+  li {
+    cursor: move;
+  }
+  li.vertical {
+    margin-bottom: $defaultMargin;
+  }
+  ul.horizontal {
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
+  li.horizontal {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: $defaultMargin;
+  }
 }
 
 .actions {
-    margin: 10px 0;
+  margin: 10px 0;
   text-align: center;
 
   button {
     background: transparent;
-    border: 1px solid black;
-    padding: 5px;
+    border: 1px solid $borderColor;
+    padding: $defaultPadding;
   }
   input {
     background: transparent;
-    border: 1px solid black;
-    padding: 5px;
+    border: 1px solid $borderColor;
+    padding: $defaultPadding;
   }
-
-
 }
