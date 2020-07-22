@@ -71,7 +71,7 @@ const List = (props: ListProps<any>) => {
         });
       }
     }
-  }, [isDragable, listItemRefs]);
+  }, [isDragable]);
 
   const scroll = (negativeScroll: boolean) => {
     const list = listMainRef.current;
