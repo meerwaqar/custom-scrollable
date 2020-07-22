@@ -1,7 +1,17 @@
 import React, { useEffect, useState, useRef } from "react";
-import { ListProps } from "./list.props";
-import "./list.style.scss";
 import { getDragAfterElement } from "./helper";
+import "./list.style.scss";
+
+interface ListProps<T> {
+  data?: Array<T>;
+  showButtons?: boolean;
+  showGotoElement?: boolean;
+  orientation?: "vertical" | "horizontal";
+  component?: (value: T, index: number) => JSX.Element;
+  width?: number;
+  height?: number;
+  isDragable?: boolean;
+}
 
 const List = (props: ListProps<any>) => {
   const {
@@ -75,7 +85,7 @@ const List = (props: ListProps<any>) => {
       const options = isVertical
         ? { top: toScroll + 5 }
         : { left: toScroll + 5 };
-      list?.current?.scrollBy({...options, behavior:"smooth"}); // 5px Margin
+      list?.current?.scrollBy({ ...options, behavior: "smooth" }); // 5px Margin
     }
   };
 

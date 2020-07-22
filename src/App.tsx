@@ -10,6 +10,9 @@ const getData = (n: number) => {
 const listItemComponent = (val: Array<any>, index: number) => {
   return <div className="custom-list-item">Item Number {val}</div>;
 };
+const horizontalListItemComponent = (val: Array<any>, index: number) => {
+  return <div className="custom-list-item">{val}</div>;
+};
 
 function App() {
   return (
@@ -24,7 +27,7 @@ function App() {
         data={getData(100)}
         orientation="horizontal"
         isDragable
-        component={listItemComponent}
+        component={horizontalListItemComponent}
       />
     </div>
   );
